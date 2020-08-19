@@ -9,15 +9,26 @@
 <body>
 
   <div class="container">
-    <h1>To Do</h1>
+    <h1>My Todo List</h1>
 
     <form class="todo-form">
       <input type="text" class="todo-input" placeholder="Add New Item">
       <button type="submit" class="add-button">Add</button>
     </form>
 
+    <!-- Control buttons -->
+    <div id="filter-buttons">
+      <button class="btn active" onclick="filterItems('all')"> Show all</button>
+      <button class="btn" onclick="filterItems('pending')"> Pending</button>
+      <button class="btn" onclick="filterItems('done')"> Done</button>
+    </div>
+
     <ul class="todo-items"></ul>
   </div>
+
+  <footer>
+    <p>@santiguillengar, 2020</p>
+  </footer>
   
   <script type="text/javascript" src="js/script.js"></script>
 </body>

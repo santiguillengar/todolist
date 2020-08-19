@@ -31,6 +31,23 @@ function addTodo(item) {
 
 }
 
+// filter different kinds of todos
+function filterItems(show) {
+  let tempTodos = todos;
+
+  if (show === 'pending') {
+    tempTodos = todos.filter(function(item) {
+      return item.completed !== true;
+    });
+  }
+  else if (show === 'done') {
+    tempTodos = todos.filter(function(item) {
+      return item.completed !== false;
+    });
+  } 
+  renderTodos(tempTodos);
+}
+
 // ender given todos to screen
 function renderTodos(todos) {
   todoItemsList.innerHTML = ''; // clear everything inside <ul> with class=todo-items
@@ -51,7 +68,7 @@ function renderTodos(todos) {
     li.innerHTML = `
       <input type="checkbox" class="checkbox" ${checked}>
       ${item.name}
-      <button class="delete-button">X</button>
+      <button class="delete-button">╳</button>
     `;
     // add the <li> to the <ul>
     todoItemsList.append(li);
