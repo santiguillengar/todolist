@@ -32,6 +32,10 @@ ul {
   list-style-type: none; /* get rid of bullet points on side of list items */
 }
 
+a {
+  color: var(--links-color);
+}
+
 /* common style ends */
 
 /* container */
@@ -50,6 +54,10 @@ ul {
 
 h1 {
   color: var(--primary-color);
+  /* text-shadow: 2px 2px #E57010; */
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-color);
+  border-color: var(--bg-color);
   font-size: 3rem;
   padding-top:30px;
 }
