@@ -9,6 +9,23 @@
 <body>
 
   <div class="container">
+    <!-- Menu -->
+    <div class="menuToggle" onclick="toggleMenu(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <div id="menu" style="display:none">
+      <h2>Settings</h2>
+      <div class="menu-row">
+      <p>Place new items:</p>
+
+      <input type="radio" id="top" name="placeItems" value="top" onclick="placeItems('top')">
+      <label for="top">Top</label>
+      <input type="radio" id="bottom" name="placeItems" value="bottom"  onclick="placeItems('bottom')">
+      <label for="bottom">Bottom</label></div>
+    </div>
+
     <h1>My Todo List</h1>
 
     <form class="todo-form">
