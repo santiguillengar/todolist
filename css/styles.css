@@ -196,7 +196,34 @@ h1 {
 }
 
 #menu {
-  background-color: red;
+  padding: 10px;
+}
+
+.menu-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+#menu h2 {
+  color: var(--primary-color);
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.menu-row p {
+  padding-right: 10px;
+}
+
+.menu-row input {
+  margin-left: 10px;
+}
+
+.menu-row label {
+  margin-left: 5px;
 }
 
 .bar1, .bar2, .bar3 {

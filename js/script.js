@@ -21,8 +21,14 @@ function addTodo(item) {
       completed: false
     };
 
-    // add it to todos array
-    todos.push(todo);
+    console.log('placeNewItem:');
+    console.log(window.localStorage.getItem('placeNewItem'));
+    // add it to todos array (either top or bottom depending on settings)
+    if (window.localStorage.getItem('placeNewItem') === 'top') {
+      todos.unshift(todo);
+    } else {
+      todos.push(todo);
+    }
     addToLocalStorage(todos);
 
     // clear the input box value
@@ -89,8 +95,6 @@ function getFromLocalStorage() {
   }
 }
 
-// initially get everything from localStorage
-getFromLocalStorage();
 
 
 todoItemsList.addEventListener('click', function(event) {
@@ -134,3 +138,12 @@ function toggleMenu(x) {
     menu.style.display = "none";
   }
 }
+
+// function to update setting on where to place new todo items on list
+function placeItems(position) {
+  localStorage.setItem('placeNewItem', position);
+}
+
+
+// initially get everything from localStorage
+getFromLocalStorage();
