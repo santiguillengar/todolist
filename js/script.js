@@ -122,3 +122,15 @@ function deleteTodo(id) {
   // update localStorage
   addToLocalStorage(todos);
 }
+
+// menu function
+function toggleMenu(x) {
+  x.classList.toggle("change");
+  var menu = document.getElementById("menu");
+  console.log(menu.style.display);
+  if (menu.style.display === "none") {
+    menu.style.display = "block";
+  } else {
+    menu.style.display = "none";
+  }
+}
