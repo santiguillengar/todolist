@@ -97,7 +97,7 @@ h1 {
   color: var(--bg-color);
   border: 1px solid var(--bg-color);
   outline: none;
-  padding: 4px;
+  padding: 4px 8px 4px 8px;
   font-size: 0.8rem;
   float: left;
 }
