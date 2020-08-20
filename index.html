@@ -34,10 +34,10 @@
     </form>
 
     <!-- Control buttons -->
-    <div id="filter-buttons" class="btn-group">
-      <button class="btn active" onclick="filterItems('all')"> Show all</button>
-      <button class="btn" onclick="filterItems('pending')"> Pending</button>
-      <button class="btn" onclick="filterItems('done')"> Done</button>
+    <div id="filter-buttons">
+      <button id="filter-all" class="btn active" onclick="filterItems('all')"> Show all</button>
+      <button id="filter-pending" class="btn" onclick="filterItems('pending')"> Pending</button>
+      <button id="filter-done" class="btn" onclick="filterItems('done')"> Done</button>
     </div>
 
     <ul class="todo-items"></ul>

@@ -78,8 +78,23 @@ function renderTodos(todos) {
     `;
     // add the <li> to the <ul>
     todoItemsList.append(li);
+    updateFilterMessages();
   });
 
+}
+
+function updateFilterMessages() {
+  const all = document.getElementById('filter-all');
+  const pending = document.getElementById('filter-pending');
+  const done = document.getElementById('filter-done');
+
+  const numAll = todos.length;
+  const numPending = todos.filter(function(item) {return item.completed !== true;}).length;
+  const numDone = numAll - numPending;
+
+  all.innerText = 'Show All (' + numAll + ')';
+  pending.innerText = 'Pending ('+ numPending + ')';
+  done.innerText = 'Done ('+ numDone + ')';
 }
 
 function addToLocalStorage(todos) {
