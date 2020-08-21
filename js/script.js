@@ -162,3 +162,8 @@ function placeItems(position) {
 
 // initially get everything from localStorage
 getFromLocalStorage();
+
+let copyright = document.getElementById('copyright');
+if (copyright.innerHTML === '') {
+  copyright.appendChild(document.createTextNode(new Date().getFullYear()))
+}
