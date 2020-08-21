@@ -162,3 +162,5 @@ function placeItems(position) {
 
 // initially get everything from localStorage
 getFromLocalStorage();
+
+document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()));
