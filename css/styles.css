@@ -5,7 +5,7 @@
   --font-color: #070D21;
   --primary-color: #e9c46a;
   --secondary-color: #f4a261;
-  --links-color: #2a9d4f;
+  --links-color: #2FB158;
 }
 
 * {
@@ -129,7 +129,7 @@ h1 {
 
 /* todo-items */
 .todo-items {
-  min-width: 350px;
+  min-width: 450px;
 }
 
 /* each li with class="item" */
