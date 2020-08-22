@@ -137,6 +137,7 @@ h1 {
   background-color: #fff;
   padding: 10px;
   font-size: 1rem;
+  border: 1pt solid var(--surface-color);
 }
 
 

@@ -167,3 +167,8 @@ let copyright = document.getElementById('copyright');
 if (copyright.innerHTML === '') {
   copyright.appendChild(document.createTextNode(new Date().getFullYear()))
 }
+
+new Sortable(sortablelist, {
+  animation: 150,
+  ghostClass: 'sortable-ghost'
+});
