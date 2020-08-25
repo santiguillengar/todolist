@@ -21,8 +21,6 @@ function addTodo(item) {
       completed: false
     };
 
-    console.log('placeNewItem:');
-    console.log(window.localStorage.getItem('placeNewItem'));
     // add it to todos array (either top or bottom depending on settings)
     if (window.localStorage.getItem('placeNewItem') === 'top') {
       todos.unshift(todo);
@@ -170,5 +168,23 @@ if (copyright.innerHTML === '') {
 
 new Sortable(sortablelist, {
   animation: 150,
-  ghostClass: 'sortable-ghost'
+  ghostClass: 'sortable-ghost',
+  onUpdate: function(/**Event*/evt) { // when changes happen on html, update javascript array to have new order.
+    extractNewOrder();
+	}
 });
+
+function extractNewOrder() {
+  let sortablelist = document.getElementById('sortablelist').getElementsByTagName("li");
+  let newTodos = [];
+  for(let i=0; i<sortablelist.length; i++) {
+    let newTodo = {};
+    newTodo['id'] = sortablelist[i].getAttribute('data-key');
+    newTodo['name'] = sortablelist[i].innerText.slice(0, -2).trim();
+    newTodo['completed'] = sortablelist[i].classList.contains('checked');
+
+    newTodos.push(newTodo);
+  }
+  todos = newTodos;
+
+}
