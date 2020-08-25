@@ -7,7 +7,7 @@
   <title>To Do List</title>
 </head>
 <body>
-
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
   <div class="container">
     <!-- Menu -->
     <div class="menuToggle" onclick="toggleMenu(this)">
@@ -40,7 +40,7 @@
       <button id="filter-done" class="btn" onclick="filterItems('done')"> Done</button>
     </div>
 
-    <ul class="todo-items"></ul>
+    <ul class="todo-items" id="sortablelist"></ul>
   </div>
 
   <footer>
