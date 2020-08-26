@@ -82,7 +82,7 @@ function renderTodos(todos) {
     li.innerHTML = `
       <input type="checkbox" class="checkbox" ${checked}>
       ${item.name}
-      <button class="delete-button">╳</button>
+      <button class="delete-button">X</button>
     `;
     // add the <li> to the <ul>
     todoItemsList.append(li);

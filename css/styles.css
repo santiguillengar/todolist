@@ -163,12 +163,12 @@ h1 {
 
 .delete-button {
   float: right;
-  color: var(--accent-color);
+  /* color: var(--primary-color); */
   background-color: transparent;
   font-weight: bold;
   border: none;
   border-radius: 100%;
-  padding: 2px 5px;
+  padding: 2px;
   margin-left: 10px;
 }
 
