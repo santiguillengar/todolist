@@ -52,6 +52,16 @@ function filterItems(show) {
   renderTodos(tempTodos);
 }
 
+// remove done items
+function clearDone() {
+  todos = todos.filter(function(item) {
+    return item.completed !== true;
+  });
+  addToLocalStorage(todos);
+  updateFilterMessages();
+  renderTodos(tempTodos);
+}
+
 // ender given todos to screen
 function renderTodos(todos) {
   todoItemsList.innerHTML = ''; // clear everything inside <ul> with class=todo-items
