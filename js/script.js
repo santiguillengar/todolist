@@ -186,5 +186,6 @@ function extractNewOrder() {
     newTodos.push(newTodo);
   }
   todos = newTodos;
+  addToLocalStorage(todos);
 
 }
