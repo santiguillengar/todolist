@@ -52,6 +52,16 @@ function filterItems(show) {
   renderTodos(tempTodos);
 }
 
+// remove done items
+function clearDone() {
+  todos = todos.filter(function(item) {
+    return item.completed !== true;
+  });
+  addToLocalStorage(todos);
+  updateFilterMessages();
+  renderTodos(tempTodos);
+}
+
 // ender given todos to screen
 function renderTodos(todos) {
   todoItemsList.innerHTML = ''; // clear everything inside <ul> with class=todo-items
@@ -72,7 +82,7 @@ function renderTodos(todos) {
     li.innerHTML = `
       <input type="checkbox" class="checkbox" ${checked}>
       ${item.name}
-      <button class="delete-button">╳</button>
+      <button class="delete-button">X</button>
     `;
     // add the <li> to the <ul>
     todoItemsList.append(li);
@@ -186,5 +196,6 @@ function extractNewOrder() {
     newTodos.push(newTodo);
   }
   todos = newTodos;
+  addToLocalStorage(todos);
 
 }

@@ -92,7 +92,7 @@ h1 {
   padding-bottom: 15px;
 }
 
-#filter-buttons button {
+#filter-buttons button, #clear-done {
   background-color: var(--primary-color);
   color: var(--bg-color);
   border: 1px solid var(--bg-color);
@@ -100,6 +100,11 @@ h1 {
   padding: 4px 8px 4px 8px;
   font-size: 0.8rem;
   float: left;
+}
+
+#clear-done {
+  border-radius: 5px;
+  margin-top: 15px;
 }
 
 #filter-buttons button:not(:last-child) {
@@ -116,9 +121,7 @@ h1 {
   border-bottom-right-radius: 5px;
 }
 
-
-
-.add-button:hover, #filter-buttons button:hover{
+.add-button:hover, #filter-buttons button:hover, #clear-done:hover{
   background-color: var(--secondary-color);
 }
 
@@ -160,12 +163,12 @@ h1 {
 
 .delete-button {
   float: right;
-  color: var(--accent-color);
+  /* color: var(--primary-color); */
   background-color: transparent;
   font-weight: bold;
   border: none;
   border-radius: 100%;
-  padding: 2px 5px;
+  padding: 2px;
   margin-left: 10px;
 }
 
