@@ -90,7 +90,6 @@ function renderTodos(todos) {
   });
 
 }
-
 function updateFilterMessages() {
   const all = document.getElementById('filter-all');
   const pending = document.getElementById('filter-pending');

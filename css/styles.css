@@ -86,11 +86,48 @@ h1 {
   font-size: 1rem;
 }
 
+.checkbox {
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+}
+.checkbox::-ms-check {
+  display: none;
+}
+
+.checkbox {
+  border-radius: 1rem;
+  height: 22px;
+  width: 22px;
+  border: 3px solid var(--primary-color);
+  cursor: pointer;
+}
+.checkbox:checked {
+  border: 3px solid var(--secondary-color);
+  box-shadow: inset 0 0 0 10px var(--primary-color);
+}
+
+.checkbox:hover {
+  border: 3px solid var(--secondary-color);
+}
+
 /* todo-form style ends */
 
 #filter-buttons {
   padding-bottom: 15px;
 }
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+
+li .delete-button {
+  margin-left: auto;
+}
+
 
 #filter-buttons button, #clear-done {
   background-color: var(--primary-color);
@@ -163,7 +200,7 @@ h1 {
 
 .delete-button {
   float: right;
-  /* color: var(--primary-color); */
+  color: var(--primary-color);
   background-color: transparent;
   font-weight: bold;
   border: none;
